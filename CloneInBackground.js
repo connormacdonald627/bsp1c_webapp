@@ -1,13 +1,13 @@
 const { FETCHURL } = require('./Config');
-const { spawn } = require('child_process');
-const path = require('path');
-const fs = require('fs');
+const Spawn = require('child_process').spawn;
+const Path = require('path');
+const Fs = require('fs');
 
 function CloneInBackground() {
-    const ClonePath = path.join(__dirname, 'app');
+    const ClonePath = Path.join(__dirname, 'app');
     
-    if (fs.existsSync(ClonePath)) {
-        const Pull = spawn('git', ['pull'], {
+    if (Fs.existsSync(ClonePath)) {
+        const Pull = Spawn('git', ['pull'], {
             cwd: ClonePath,
             detached: true,
             stdio: 'ignore'
