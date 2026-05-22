@@ -62,13 +62,13 @@ function PrepareEnv() {
 function CloneRepoOnStart() {
     const ClonePath = Path.join(__dirname, 'app');
 
-    PrepareEnv();
-
     if (!Fs.existsSync(ClonePath)) {
         console.log('Cloning repository...');
         ExecSync(`git clone ${FETCHURL} ${ClonePath}`, { stdio: 'inherit' });
         console.log('Repository cloned successfully to:', ClonePath);
     }
+    
+    PrepareEnv();
     
     const Background = Spawn('node', ['CloneInBackground.js'], {
         detached: true,
