@@ -5,13 +5,13 @@ const ENV = [
         Path: './app/frontend/.env',
         Vars: {
             BACKEND_URL: "https://bsp1c-backend.onrender.com",
+            HOSTS: "bsp1c-frontend.onrender.com"
         }
     },
     {
         Path: './app/backend/.env',
         Vars: {
-            FRONTEND_URL: "https://bsp1c-frontend.onrender.com",
-            HOSTS: "bsp1c-frontend.onrender.com"
+            FRONTEND_URL: "https://bsp1c-frontend.onrender.com"
         }
     }
 ];
