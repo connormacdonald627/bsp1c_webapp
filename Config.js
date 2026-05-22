@@ -11,6 +11,7 @@ const ENV = [
         Path: './app/backend/.env',
         Vars: {
             FRONTEND_URL: "https://bsp1c-frontend.onrender.com",
+            HOSTS: "bsp1c-frontend.onrender.com"
         }
     }
 ];
